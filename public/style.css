@@ -1,0 +1,80 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF3CC;
+}
+
+/* color scheme */
+/* 
+#253031 black leather-jacket (background-color)
+#315659 dark slate gray (header)
+#2978A0 lapis lazuli (header:hover)
+#FFF3CC misty moss (default text color)
+#C6E0FF periwinkle
+*/
+
+body {
+    background-color: #253031;
+    margin: 0px
+}
+
+header {
+    background-color: #315659;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    box-shadow: 1px 1px 5px black;
+}
+
+.section {
+    font-size: 20px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 12px 0;
+    color: #FFF3CC;
+}
+
+.section:hover {
+    background-color: #2978A0;
+    cursor: pointer;
+}
+
+#hero {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 89vh;
+}
+
+#portrait {
+    width: 30vw;
+    min-width: 250px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px black;
+}
+
+#hero > h3 {
+    background-color: #315659;
+    padding: 12px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+    margin-top: 45px;
+    width: 50vw;
+    min-width: 250px;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        display: none;
+    }
+
+    #hero {
+        padding: 10px;
+        justify-content: center;
+    }
+}
