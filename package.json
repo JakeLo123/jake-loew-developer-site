@@ -4,8 +4,8 @@
   "description": "Jake Loew Developer Portfolio",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
-    "dev": "nodemon main.js"
+    "start": "webpack & node main.js",
+    "dev": "webpack -w & nodemon main.js"
   },
   "author": "Jake Loew",
   "license": "ISC",
@@ -14,6 +14,8 @@
     "nodemailer": "^6.4.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   }
 }
