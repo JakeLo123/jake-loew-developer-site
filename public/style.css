@@ -90,13 +90,19 @@ header {
 div.project-details {
     flex: 3;
     padding: 15px;
-    /* max-width: 45vw; */
+}
+
+div.project-details > * {
+    margin: 15px 0;
 }
 
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: #253031; */
+    padding: 10px;
+    max-width: fit-content;
+    border: 1px solid #253031;
+    border-radius: 20px;
 }
 
 .tech-item {
@@ -127,14 +133,35 @@ div.project-details {
     border: 1px solid black;
     border-radius: 5px;
     height: fit-content;
+    margin: 10px;
+}
+
+.inactive {
+    background-color: #4f6668;
+    border: none;
 }
 
 img.project-gif {
     flex: 1;
     border-radius: 5px;
-    /* border: 1px solid black; */
     object-fit: scale-down;
     justify-self: flex-end;
+}
+
+@media only screen and (max-width: 950px) {
+    #hero {
+        height: 90vh;
+        padding: 10px;
+        justify-content: center;
+    }
+    .project-card {
+        flex-direction: column;
+    }
+    img.project-gif {
+        width: 100%;
+        align-self: flex-end;
+        object-fit: contain;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -149,6 +176,10 @@ img.project-gif {
     }
     .project-card {
         flex-direction: column;
+    }
+    img.project-gif {
+        width: 100%;
         align-self: flex-end;
+        object-fit: contain;
     }
 }

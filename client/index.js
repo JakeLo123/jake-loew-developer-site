@@ -20,7 +20,7 @@ function buildProjectSection() {
     if (project.deploymentLink.length) {
       deployLink = `<a class="project-link" target="_blank" href=${project.deploymentLink}>visit site</a>`;
     } else {
-      deployLink = `<p class="project-link">in production</p>`;
+      deployLink = `<p class="project-link inactive">in production</p>`;
     }
     const template = `
         <div class="project-details">
