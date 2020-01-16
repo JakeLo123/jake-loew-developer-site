@@ -16,13 +16,24 @@ function buildProjectSection() {
             </div>
         `;
     });
+    let deployLink;
+    if (project.deploymentLink.length) {
+      deployLink = `<a class="project-link" target="_blank" href=${project.deploymentLink}>visit site</a>`;
+    } else {
+      deployLink = `<p class="project-link">in production</p>`;
+    }
     const template = `
         <div class="project-details">
-            <h2 class="project-title">${project.title} - </h2><h3>${
-      project.role
-    }</h3>
+            <h2 class="project-title">${project.title} - </h2>
+            <h3>${project.role}</h3>
             <p>${project.description}</p>
             <div class="tech-stack">${technologyList.join('')}</div>
+            <div class="project-links-group">
+            ${deployLink}
+              <a class="project-link" target="_blank" href=${
+                project.sourceCode
+              }>view code</a>
+            </div>
         </div>
         <img src="${project.gif}" alt="${project.title}" class="project-gif">
         `;
