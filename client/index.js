@@ -1,7 +1,13 @@
 import allProjects from './projects-data';
 
+const heroNavigation = document.getElementsByClassName('navigation')[3];
 const projectNavigation = document.getElementsByClassName('navigation')[0];
+const educationNavigation = document.getElementsByClassName('navigation')[1];
+const contactNavigation = document.getElementsByClassName('navigation')[2];
+const hero = document.getElementById('hero');
 const projectSection = document.getElementById('projects');
+const educationSection = document.getElementById('education');
+const contactSection = document.getElementById('contact');
 
 function buildProjectSection() {
   for (let i = 0; i < allProjects.length; ++i) {
@@ -44,6 +50,15 @@ function buildProjectSection() {
 
 buildProjectSection();
 
+heroNavigation.addEventListener('click', () => {
+  hero.scrollIntoView();
+});
 projectNavigation.addEventListener('click', () => {
   projectSection.scrollIntoView({ behavior: 'smooth' });
+});
+educationNavigation.addEventListener('click', () => {
+  educationSection.scrollIntoView({ behavior: 'smooth' });
+});
+contactNavigation.addEventListener('click', () => {
+  contactSection.scrollIntoView({ behavior: 'smooth' });
 });

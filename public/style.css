@@ -68,6 +68,7 @@ header {
     min-width: 250px;
 }
 
+/* PROJECT div */
 #projects {
     padding: 0 20px;
 }
@@ -101,7 +102,7 @@ div.project-details > * {
     flex-wrap: wrap;
     padding: 10px;
     max-width: fit-content;
-    border: 1px solid #253031;
+    border: 1px solid #2530318f;
     border-radius: 20px;
 }
 
@@ -148,7 +149,105 @@ img.project-gif {
     justify-self: flex-end;
 }
 
-@media only screen and (max-width: 950px) {
+/* EDUCATION div */
+#education {
+    padding: 20px;
+}
+
+.education-card {
+    margin: 16px 10px;
+    background-color: #315659;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+    border: 1px solid black;
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+}
+
+.education-image {
+    max-width: 100px;
+    max-height: 40px;
+    padding: 10px;
+    margin-right: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+/* CONTACT div */
+#contact {
+    padding: 20px;
+}
+
+form {
+    margin: 16px 10px;
+    background-color: #315659;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+    border: 1px solid black;
+}
+
+#inputs-container {
+    display: flex;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+    margin: 10px 10px 10px 0;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size: 20px;
+}
+
+input#full-name {
+    margin-right: 10px;
+}
+
+textarea {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    resize: none;
+    display: block;
+    margin: 10px 10px 10px 0;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    width: 100%;
+}
+
+button {
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#email-link {
+    text-align: center;
+}
+
+@media only screen and (max-width: 850px) {
     #hero {
         height: 90vh;
         padding: 10px;
@@ -181,5 +280,17 @@ img.project-gif {
         width: 100%;
         align-self: flex-end;
         object-fit: contain;
+    }
+    #inputs-container {
+        flex-direction: column;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        justify-content: space-between;
+        margin: 10px 10px 10px 0;
+    }
+    textarea {
+        margin: 0px 10px 10px 0px;
     }
 }
