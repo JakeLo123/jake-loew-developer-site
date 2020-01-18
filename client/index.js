@@ -73,7 +73,7 @@ const submitMessage = () => {
     email,
     message,
   };
-  console.log('formData...', formData);
+  axios.post('/api/message', formData);
 };
 
 const contactForm = document.querySelector('form');
