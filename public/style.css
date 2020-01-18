@@ -1,6 +1,8 @@
 * {
     font-family: 'Montserrat', sans-serif;
     color: #FFF3CC;
+    animation: slide-in 0.4s;
+    animation-play-state: running;
 }
 
 /* color scheme */
