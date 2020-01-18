@@ -1,4 +1,5 @@
 import allProjects from './projects-data';
+import axios from 'axios';
 
 const heroNavigation = document.getElementsByClassName('navigation')[3];
 const projectNavigation = document.getElementsByClassName('navigation')[0];
@@ -54,11 +55,33 @@ heroNavigation.addEventListener('click', () => {
   hero.scrollIntoView();
 });
 projectNavigation.addEventListener('click', () => {
-  projectSection.scrollIntoView({ behavior: 'smooth' });
+  projectSection.scrollIntoView();
 });
 educationNavigation.addEventListener('click', () => {
-  educationSection.scrollIntoView({ behavior: 'smooth' });
+  educationSection.scrollIntoView();
 });
 contactNavigation.addEventListener('click', () => {
-  contactSection.scrollIntoView({ behavior: 'smooth' });
+  contactSection.scrollIntoView();
+});
+
+const submitMessage = () => {
+  const fullName = document.querySelector('#full-name').value;
+  const email = document.querySelector('#email').value;
+  const message = document.querySelector('textarea').value;
+  const formData = {
+    fullName,
+    email,
+    message,
+  };
+  console.log('formData...', formData);
+};
+
+const contactForm = document.querySelector('form');
+const thankYou = document.querySelector('#thank-you-note');
+contactForm.addEventListener('submit', e => {
+  e.preventDefault();
+  thankYou.style.display = 'block';
+  contactForm.style.animationPlayState = 'running;';
+  contactForm.style.display = 'none';
+  submitMessage();
 });

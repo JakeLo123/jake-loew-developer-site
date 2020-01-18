@@ -189,6 +189,8 @@ form {
     border-radius: 5px;
     box-shadow: 1px 1px 5px black;
     border: 1px solid black;
+    animation: slide-out 0.4s;
+    animation-play-state: paused;
 }
 
 #inputs-container {
@@ -223,6 +225,7 @@ textarea {
     color: black;
     font-size: 15px;
     resize: none;
+    height: 150px;
     display: block;
     margin: 10px 10px 10px 0;
     -webkit-box-sizing: border-box;
@@ -268,6 +271,9 @@ button {
         display: none;
         background-color: red;
     }
+    .section-header {
+        margin-left: 15px;
+    }
 
     #hero {
         padding: 10px;
@@ -283,14 +289,50 @@ button {
     }
     #inputs-container {
         flex-direction: column;
+        width: 100%;
+    }
+    input {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        width: 100%;
-        justify-content: space-between;
-        margin: 10px 10px 10px 0;
+    }
+    input#full-name {
+        margin: 0px 0px 10px 0;
     }
     textarea {
         margin: 0px 10px 10px 0px;
+    }
+}
+
+
+
+@keyframes slide-in {
+	from {
+        transform: translateX(700px)
+    }
+    to {
+        transform: translateX(0px)
+    }
+}
+
+#thank-you-note {
+    margin: 16px 10px;
+    background-color: #315659;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+    border: 1px solid black;
+    display: none;
+    font-size: 25px;
+    animation: slide-in 0.4s;
+    animation-play-state: running;
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0px)
+    }
+    to {
+        transform: translateX(-700px)
     }
 }
