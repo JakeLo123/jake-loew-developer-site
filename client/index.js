@@ -1,7 +1,8 @@
 import allProjects from './projects-data';
 import axios from 'axios';
 
-const heroNavigation = document.getElementsByClassName('navigation')[3];
+// const heroNavigation = document.getElementsByClassName('navigation')[3];
+const backToTop = document.getElementById('back-to-top');
 const projectNavigation = document.getElementsByClassName('navigation')[0];
 const educationNavigation = document.getElementsByClassName('navigation')[1];
 const contactNavigation = document.getElementsByClassName('navigation')[2];
@@ -48,20 +49,35 @@ function buildProjectSection() {
     projectSection.appendChild(card);
   }
 }
-
 buildProjectSection();
 
-heroNavigation.addEventListener('click', () => {
-  hero.scrollIntoView();
+const scroll =
+  window.requestAnimationFrame ||
+  function(callback) {
+    window.setTimeout(callback, 50);
+  };
+
+function loop() {
+  scroll(loop);
+  if (window.scrollY > 200) {
+    backToTop.style.display = '';
+  } else {
+    backToTop.style.display = 'none';
+  }
+}
+loop();
+
+backToTop.addEventListener('click', () => {
+  hero.scrollIntoView({ behavior: 'smooth' });
 });
 projectNavigation.addEventListener('click', () => {
-  projectSection.scrollIntoView();
+  projectSection.scrollIntoView({ behavior: 'smooth' });
 });
 educationNavigation.addEventListener('click', () => {
-  educationSection.scrollIntoView();
+  educationSection.scrollIntoView({ behavior: 'smooth' });
 });
 contactNavigation.addEventListener('click', () => {
-  contactSection.scrollIntoView();
+  contactSection.scrollIntoView({ behavior: 'smooth' });
 });
 
 const submitMessage = () => {

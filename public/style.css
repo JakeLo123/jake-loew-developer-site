@@ -14,6 +14,25 @@
 #C6E0FF periwinkle
 */
 
+#back-to-top {
+    padding: 5px;
+    background-color:rgba(255, 255, 255, 0.336);
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border-radius: 100px;
+    box-shadow: 2px 2px 5px black;
+    z-index: 1;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#back-to-top:hover {
+    background-color:rgba(255, 255, 255, 0.904);
+}
+
 body {
     background-color: #253031;
     margin: 0px;
@@ -303,6 +322,10 @@ button {
     }
     textarea {
         margin: 0px 10px 10px 0px;
+    }
+
+    #back-to-top {
+        display: none;
     }
 }
 
