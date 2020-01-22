@@ -267,6 +267,11 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: rgba(168, 168, 168, 0.432);
+    color: white;
+}
+
 #email-link {
     text-align: center;
 }
